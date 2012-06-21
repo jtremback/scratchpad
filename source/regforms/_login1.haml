@@ -1,0 +1,20 @@
+#login1.page
+  %fieldset
+    %legend Login
+    .control-group
+      %label.control-label Username
+      .controls
+        %input{:placeholder => "Username", :type => "text"}
+    .control-group
+      %label.control-label Password
+      .controls
+        %input{:placeholder => "Password", :type => "password"}
+    .aux-link
+      %a{:href => "#passwordrecover1"} Forgot your password?
+    .form-actions
+      %a{:href => "#fullapp1"} Submit
+  .aux-link.left
+    %a{:href => "#"}
+      %img{:src => "images/sign-in-with-twitter-d.png"}
+  .aux-link.left
+    %a{:href => "#register1"} Register / Claim your Username
