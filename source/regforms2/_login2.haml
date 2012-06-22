@@ -1,6 +1,5 @@
 #login2.page
-  %fieldset
-    %legend Login
+  %div.clearfix
     .aux-box.left
       %a{:href => "#twitterscreen2"}
         %img{:src => "images/sign-in-with-twitter-l.png"}
@@ -8,6 +7,8 @@
       .well.form-explain
         If you have reserved a username with us,<br/>
         %a{:href => "#claim2"} click here to claim it.
+  %fieldset
+    %legend Login
     .control-group
       %label.control-label Username
       .controls
