@@ -27,6 +27,9 @@ $hypothered-desat: #bd5862
   color: #666666
   font-size: 0.8em
 
+=smallshadow($a: 2px, $b: 2px, $c: .1)
+  +box-shadow($a $b 1em hsla(0, 0%, 0%, $c))
+
 =plainform
   font-family: "Open Sans"
   font-size: 1em
@@ -36,7 +39,7 @@ $hypothered-desat: #bd5862
   margin-bottom: 9px
   color: $base-gray
   background-color: #ffffff
-  border: 1px solid $light-gray
+  border: 1px solid $lighter-gray
   border-radius: 3px
   width: 100%
   +single-transition("box-shadow,-moz-box-shadow,-webkit-box-shadow", 0.6s, ease)
@@ -73,6 +76,18 @@ $hypothered-desat: #bd5862
     +background-image(linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%))
     +box-shadow( inset 0 .15em .25em rgba(0, 0, 0, 0.15), 0 .05em .1em rgba(0, 0, 0, 0.0))
     border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25)
+
+//GLOBAL
+a
+  color: $hypothered-desat
+  +transition( color .2s ease-in .2s )
+  text-decoration: underline
+  &:link, &:visited
+    text-decoration: underline
+  &:active
+    text-decoration: none
+  &:hover
+    color: $hypothered
 
 //SCRATCHPAD WARNING
 .scratchpad-warning
@@ -335,7 +350,7 @@ blockquote
     font-size: 4.5em
 
 //REG FORMS
-#regforms1
+#regforms1, #regforms2
   .fakesidebar
     position: absolute
     right: 0
@@ -343,22 +358,32 @@ blockquote
     bottom: 0
     padding: 1em
     width: 400px
-    background: gray
+    background-image: url("../images/noise_1.png")
   .paper
     background: white
     padding: 1em
     height: 100%
     box-sizing: border-box
+    +smallshadow(-0px, -2px)
   .full-app
     font-family: "Permanent Marker"
     font-size: 2em
     text-align: center
   .twitterstuff
+    position: absolute
+    top: 20%
+    bottom: 20%
     text-align: center
     margin: 1em
     font-family: "Permanent Marker"
   .mockup-link
     font-family: "Permanent Marker"
+    text-align: right
+  .well
+    padding: .5em
+    border-radius: 4px
+    +box-shadow( inset 2px 2px 20px -5px rgba(0, 0, 0, .1))
+    text-align: center
   input
     &[type=text]
       +plainform
@@ -375,7 +400,7 @@ blockquote
     +pie-clearfix
     border: none
     padding:
-      top: 0
+      top: 1em
       bottom: 0
       right: 0
       left: 0
@@ -398,9 +423,18 @@ blockquote
     text-align: right
     margin-bottom: 1em
     &.left
+      max-width: 300px
       text-align: left
   .aux-box
-    margin-top: 3em
+    display: inline-block
+    max-width: 50%
+    margin-bottom: 1em
+    &.left
+      float: left
+      text-align: left
+    &.right
+      float: right
+      text-align: right
   .form-explain
     color: $base-gray
     margin-bottom: 1em

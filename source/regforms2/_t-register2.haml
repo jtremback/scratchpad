@@ -1,0 +1,14 @@
+#t-register2.page
+  %fieldset
+    %legend Register with Hypothes.is
+    .form-explain Hello, <strong>UserName</strong>! Enter a password to create an account.
+    .control-group
+      %label.control-label Password
+      .controls
+        %input{:placeholder => "Set a password", :type => "password"}
+    .control-group
+      %label.control-label Confirm password
+      .controls
+        %input{:placeholder => "Confirm your password", :type => "password"}
+    .form-actions
+      %a{:href => "#c-codeconfirm2"} Register
