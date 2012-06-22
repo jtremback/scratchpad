@@ -18,12 +18,35 @@
       <!-- /= partial "quote2.haml" -->
       <!-- /= partial "pointy_buttons.haml" -->
       <!-- /= partial "buttons2.haml" -->
-      <div id='regforms1'>
+      <!-- /= partial "regforms1/regforms1.haml" -->
+      <div id='regforms2'>
+        <div class='page' id='twitterscreen2'>
+          <div class='twitterstuff'>
+            <a href='#fullapp2'>
+              <img src='images/sign-in-with-twitter.png' />
+            </a>
+            <div class='mockup-link'>
+              <a href='#t-register2'>(not yet registered with hypothesis)</a>
+              <a href='#usernametaken2'>(username taken)</a>
+            </div>
+          </div>
+        </div>
         <div class='fakesidebar'>
           <div class='paper'>
-            <div class='page' id='login1'>
+            <div class='page' id='login2'>
               <fieldset>
                 <legend>Login</legend>
+                <div class='aux-box left'>
+                  <a href='#twitterscreen2'>
+                    <img src='images/sign-in-with-twitter-l.png' />
+                  </a>
+                </div>
+                <div class='aux-box right'>
+                  <div class='well form-explain'>
+                    If you have reserved a username with us,<br/>
+                    <a href='#claim2'>click here to claim it.</a>
+                  </div>
+                </div>
                 <div class='control-group'>
                   <label class='control-label'>Username</label>
                   <div class='controls'>
@@ -37,25 +60,20 @@
                   </div>
                 </div>
                 <div class='aux-link'>
-                  <a href='#passwordrecover1'>Forgot your password?</a>
+                  <a href='#passwordrecover2'>Forgot your password?</a>
                 </div>
                 <div class='form-actions'>
-                  <a href='#fullapp1'>Submit</a>
+                  <a href='#fullapp2'>Submit</a>
                 </div>
               </fieldset>
               <div class='aux-link left'>
-                <a href='#twitterscreen1'>
-                  <img src='images/sign-in-with-twitter-d.png' />
-                </a>
-              </div>
-              <div class='aux-link left'>
-                <a href='#register1'>Register / Claim your Username</a>
+                <a href='#register2'>Register with Hypothes.is</a>
               </div>
             </div>
-            <div class='page' id='register1'>
+            <div class='page' id='register2'>
               <fieldset>
                 <legend>Register with Hypothes.is</legend>
-                <div class='form-explain'>Enter a username and password to create an account. If you have already reserved a username with us, enter it and a password to claim it.</div>
+                <div class='form-explain'>Enter a username and password to create an account.</div>
                 <div class='control-group'>
                   <label class='control-label'>Username</label>
                   <div class='controls'>
@@ -81,13 +99,16 @@
                   </div>
                 </div>
                 <div class='form-actions'>
-                  <a href='#emailreceive1'>Register / Claim</a>
+                  <a href='#r-codeconfirm2'>Register</a>
                 </div>
-                <a class='mockup-link' href='#usernametaken1'>(if the username is already taken)</a>
+                <div class='mockup-link'>
+                  <a href='#usernametaken2'>(if the username is already taken)</a>
+                </div>
               </fieldset>
             </div>
             <!-- /  %fieldset -->
             <!-- /    %legend Claim your username -->
+            <!-- /    .form-explain If you have already reserved a username with us, enter it and your email to claim it. -->
             <!-- /    .control-group -->
             <!-- /      %label.control-label Username -->
             <!-- /      .controls -->
@@ -97,15 +118,35 @@
             <!-- /      .controls -->
             <!-- /        %input{:placeholder => "Enter your email", :type => "text"} -->
             <!-- /    .form-actions -->
-            <!-- /      %a{:href => "#profilecreate1"} Claim -->
-            <div class='page' id='profilecreate1'>
+            <!-- /      %a{:href => "#c-codeconfirm2"} Claim -->
+            <div class='page' id='t-register2'>
               <fieldset>
-                <legend>Create profile</legend>
+                <legend>Register with Hypothes.is</legend>
+                <div class='form-explain'>Hello, <strong>UserName</strong>! Enter a password to create an account.</div>
+                <div class='control-group'>
+                  <label class='control-label'>Password</label>
+                  <div class='controls'>
+                    <input placeholder='Set a password' type='password' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Confirm password</label>
+                  <div class='controls'>
+                    <input placeholder='Confirm your password' type='password' />
+                  </div>
+                </div>
+                <div class='form-actions'>
+                  <a href='#c-codeconfirm2'>Register</a>
+                </div>
+              </fieldset>
+            </div>
+            <div class='page' id='profilecreate2'>
+              <fieldset>
+                <legend>Create profile (All fields are optional)</legend>
                 <div class='pic-group'>
                   <div class='profile-pic'></div>
                   <div class='form-explain'>
-                    Maximum size of 700k. JPG, GIF, PNG.
-                    Need help uploading a profile image?
+                    Upload a profile picture. Images over 700k will be compressed.
                     <a href='#'>Learn more</a>
                   </div>
                   <div class='form-actions'>
@@ -137,49 +178,55 @@
                   </div>
                 </div>
                 <div class='form-actions'>
-                  <a href='#fullapp1'>All done!</a>
+                  <a href='#fullapp2'>All done!</a>
                 </div>
               </fieldset>
             </div>
-            <div class='page' id='fullapp1'>
+            <div class='page' id='fullapp2'>
               <div class='full-app'>
                 (takes user to app)
               </div>
             </div>
-            <div class='page' id='emailreceive1'>
+            <div class='page' id='confirmcode2'>
               <div class='form-explain'>
-                You will soon receive an email from us. Once this occurs, follow the instructions contained within to complete your registration or reset your password. Once you have done this, follow the link below to create your profile.
+                You will soon receive an email from us. Once this occurs, copy the code contained within into this form and enter a password to claim your username.
               </div>
-              <a href='#profilecreate1'>Create profile</a>
+              <a href='#profilecreate1'>Submit</a>
             </div>
-            <div class='page' id='passwordrecover1'>
+            <div class='page' id='passwordrecover2'>
               <fieldset>
                 <legend>Password recovery</legend>
-                <div class='form-explain'>You forgot your password? No worries, just enter your email to receive instructions on how to reset it.</div>
+                <div class='form-explain'>You forgot your password? No worries, just enter your email and set a new password.</div>
                 <div class='control-group'>
                   <label class='control-label'>Email</label>
                   <div class='controls'>
                     <input placeholder='Email' type='text' />
                   </div>
                 </div>
+                <div class='control-group'>
+                  <label class='control-label'>New password</label>
+                  <div class='controls'>
+                    <input placeholder='Password' type='password' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Confirm password</label>
+                  <div class='controls'>
+                    <input placeholder='Confirm your password' type='password' />
+                  </div>
+                </div>
                 <div class='form-actions'>
-                  <a href='#emailreceive1'>Submit</a>
+                  <a href='#p-codeconfirm2'>Submit</a>
                 </div>
               </fieldset>
             </div>
-            <div class='page' id='twitterscreen1'>
-              <div class='twitterstuff'>
-                (twitter stuff)
-                <a href='#register1'>Sign in with Twitter</a>
-              </div>
-            </div>
-            <div class='page' id='usernametaken1'>
+            <div class='page' id='usernametaken2'>
               <fieldset>
                 <legend>Pick a different username</legend>
-                <div class='form-explain'>Looks like that username is already taken. Please try another one.</div>
+                <div class='form-explain'>Looks like <strong>UserName</strong> is already taken. Please try another username.</div>
                 <ul class='deformSet'>
                   <li class='deformSet-item'>
-                    <input name='username' type='radio' value='un1'>Username23</input>
+                    <input name='username' type='radio' value='un1'>UserName23</input>
                   </li>
                   <li class='deformSet-item'>
                     <input name='username' type='radio' value='un2'>NameUser</input>
@@ -198,7 +245,58 @@
                   </div>
                 </div>
                 <div class='form-actions'>
-                  <a href='#profilecreate1'>Submit</a>
+                  <a href='#profilecreate2'>Submit</a>
+                </div>
+              </fieldset>
+            </div>
+            <div class='page' id='c-codeconfirm2'>
+              <div class='form-explain'>
+                You will soon receive an email from us. Follow the link inside to claim your username.
+              </div>
+              <div class='aux-link left'>
+                <a href='#fullapp2'>Back to hypothesis</a>
+              </div>
+            </div>
+            <div class='page' id='p-codeconfirm2'>
+              <div class='form-explain'>
+                You will soon receive an email from us. Follow the link inside to log in with your new password.
+              </div>
+              <div class='aux-link left'>
+                <a href='#fullapp2'>Back to hypothesis</a>
+              </div>
+            </div>
+            <div class='page' id='r-codeconfirm2'>
+              <div class='form-explain'>
+                You will soon receive an email from us. Follow the link inside to register.
+              </div>
+              <div class='aux-link left'>
+                <a href='#fullapp2'>Back to hypothesis</a>
+              </div>
+            </div>
+            <div class='page' id='claim2'>
+              <fieldset>
+                <legend>Claim your username</legend>
+                <div class='form-explain'>If you have already reserved a username with us, claim it here.</div>
+                <div class='control-group'>
+                  <label class='control-label'>Email</label>
+                  <div class='controls'>
+                    <input placeholder='Enter your email' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Password</label>
+                  <div class='controls'>
+                    <input placeholder='Set a password' type='password' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Confirm password</label>
+                  <div class='controls'>
+                    <input placeholder='Confirm your password' type='password' />
+                  </div>
+                </div>
+                <div class='form-actions'>
+                  <a href='#c-codeconfirm2'>Claim</a>
                 </div>
               </fieldset>
             </div>
