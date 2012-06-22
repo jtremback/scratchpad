@@ -1,0 +1,35 @@
+#register1.page
+  %fieldset
+    %legend Register with Hypothes.is
+    .form-explain Enter a username and password to create an account. If you have already reserved a username with us, enter it and a password to claim it.
+    .control-group
+      %label.control-label Username
+      .controls
+        %input{:placeholder => "Username", :type => "text"}
+    .control-group
+      %label.control-label Email
+      .controls
+        %input{:placeholder => "Enter your email", :type => "text"}
+    .control-group
+      %label.control-label Password
+      .controls
+        %input{:placeholder => "Password", :type => "password"}
+    .control-group
+      %label.control-label Confirm password
+      .controls
+        %input{:placeholder => "Confirm your password", :type => "password"}
+    .form-actions
+      %a{:href => "#emailreceive1"} Register / Claim
+    %a.mockup-link{:href => "#usernametaken1"} (if the username is already taken)
+//  %fieldset
+//    %legend Claim your username
+//    .control-group
+//      %label.control-label Username
+//      .controls
+//        %input{:placeholder => "Username", :type => "text"}
+//    .control-group
+//      %label.control-label Email
+//      .controls
+//        %input{:placeholder => "Enter your email", :type => "text"}
+//    .form-actions
+//      %a{:href => "#profilecreate1"} Claim

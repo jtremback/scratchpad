@@ -1,0 +1,441 @@
+@import compass
+@import url(http://fonts.googleapis.com/css?family=Open+Sans|Merriweather|PT+Serif|Permanent+Marker)
+
+html
+  font-size: 14px
+  font-family: "Open Sans"
+
+//VARIABLES
+$base-gray: #777
+$gray-interval: #1e1e1e
+$light-gray: $base-gray + ( $gray-interval * 1 )
+$lighter-gray: $base-gray + ( $gray-interval * 3.5 )
+
+$hypothered: #bd1c2b
+$hypothered-desat: #bd5862
+
+//MIXINS
+=primarytext
+  font-weight: bold
+  font-size: 1.3em
+
+=secondarytext
+  font-size: 1.1em
+  font-weight: bold
+
+=tertiarytext
+  color: #666666
+  font-size: 0.8em
+
+=plainform
+  font-family: "Open Sans"
+  font-size: 1em
+  display: inline-block
+  box-sizing: border-box
+  padding: 6px 6px
+  margin-bottom: 9px
+  color: $base-gray
+  background-color: #ffffff
+  border: 1px solid $light-gray
+  border-radius: 3px
+  width: 100%
+  +single-transition("box-shadow,-moz-box-shadow,-webkit-box-shadow", 0.6s, ease)
+  &:focus
+    border-color: rgba(82, 168, 236, 0.8)
+    outline: 0
+    +box-shadow( inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6 ))
+
+=blue-glow
+  &:focus
+    +box-shadow(inset 0 0.25em 0.25em rgba(0, 0, 0, 0.075), desaturate(lighten($blue, 5%), 35%) 0 0 0.25em)
+
+=button2
+  display: inline-block
+  postion: relative
+  +background-image(linear-gradient(top, #ffffff 0%, #f9f9f9 100%))
+  cursor: pointer
+  font-family:  "Open Sans"
+  font-size: 1em
+  padding:
+    top: .4em
+    bottom: .5em
+    left: .9em
+    right: .9em
+  text-shadow: 0 1px 2px rgba(255, 255, 255, .9)
+  border: 1px solid $lighter-gray
+  border-radius: .15em
+  color: #000
+  box-sizing: border-box
+  &:hover
+    +background-image(linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.45)
+  &:active
+    +background-image(linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%))
+    +box-shadow( inset 0 .15em .25em rgba(0, 0, 0, 0.15), 0 .05em .1em rgba(0, 0, 0, 0.0))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25)
+
+//SCRATCHPAD WARNING
+.scratchpad-warning
+  position: absolute
+  top: 20px
+  left: 20px
+  +rotate(-5deg)
+  font-family: "Permanent Marker"
+  .larger
+    font-size: 2em
+  .smaller
+    font-size: .8em
+
+//REG BUTTON
+.button1
+  display: inline-block
+  postion: relative
+  font-weight: bold
+  +background-image(linear-gradient(top, #ffffff 0%, #f9f9f9 50%, #ededed 51%, #ffffff 100%))
+  cursor: pointer
+  padding:
+    top: .1em
+    bottom: .2em
+    left: .5em
+    right: .5em
+  text-shadow: 0 1px 2px rgba(255, 255, 255, .9)
+  border: 1px solid #cccccc
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.3)
+  +box-shadow( inset 0 .2em 0 rgba(255, 255, 255, 0.2), 0 .05em .1em rgba(0, 0, 0, 0.08))
+  border-radius: 4px
+  font-family:  "Open Sans"
+  color: #666
+
+  &:hover
+    +background-image(linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.45)
+
+  &:active
+    +background-image(linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%))
+    +box-shadow( inset 0 .15em .25em rgba(0, 0, 0, 0.15), 0 .05em .1em rgba(0, 0, 0, 0.0))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25)
+
+
+.button2
+  +button2
+
+
+  &:hover
+    +background-image(linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.45)
+
+  &:active
+    +background-image(linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%))
+    +box-shadow( inset 0 .15em .25em rgba(0, 0, 0, 0.15), 0 .05em .1em rgba(0, 0, 0, 0.0))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25)
+
+
+//POINTY BUTTON
+$mult: 20px
+.button.bordered
+  display: inline-block
+  height: $mult * 2
+  cursor: pointer
+  font-size: $mult
+  line-height: $mult * 2
+  font-weight: bold
+  font-family:  "Open Sans"
+  color: #666
+
+  +box-sizing(border-box)
+  border-radius: 4px
+  +background-image(linear-gradient(top, #ffffff 0%, #f9f9f9 50%, #ededed 51%, #ffffff 100%))
+  +box-shadow( inset 0 .2em 0 rgba(255, 255, 255, 0.2), 0 .05em .1em rgba(0, 0, 0, 0.08))
+  border: 1px solid #cccccc
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.3)
+
+  &:hover
+    +background-image(linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.45)
+
+  &:active
+    +background-image(linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%))
+    +box-shadow( inset 0 .15em .25em rgba(0, 0, 0, 0.15), 0 .05em .1em rgba(0, 0, 0, 0.0))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25)
+
+.button.bordered.back
+  position: relative
+  > span
+    position: relative
+    z-index: 1
+    &.pointer
+      position: absolute
+      left: $mult
+      top: $mult / 2.8
+      height: $mult * 1.4
+      width: $mult * 2
+      display: inline-block
+      -webkit-background-clip: content
+      z-index: 0
+      border-radius: 4px
+
+      -webkit-transform: rotate(45deg)
+      -webkit-mask-image: -webkit-gradient(linear, left bottom, right top, from(black), color-stop(0.5, black), color-stop(0.5, transparent), to(transparent))
+
+      +background-image(linear-gradient(left top, #ffffff 0%, #f9f9f9 50%, #ededed 51%, #ffffff 100%))
+      +box-shadow( inset 0 .2em 0 rgba(255, 255, 255, 0.2), 0 .05em .1em rgba(0, 0, 0, 0.08))
+      border: 1px solid #cccccc
+      border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.3)
+
+  &:hover span.pointer
+    +background-image(linear-gradient(left top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.45)
+
+  &:active span.pointer
+    +background-image(linear-gradient(left top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%))
+    +box-shadow( inset 0 .15em .25em rgba(0, 0, 0, 0.15), 0 .05em .1em rgba(0, 0, 0, 0.0))
+    border-color: rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25) rgba(0, 0, 0, 0.25)
+
+
+
+//BUTTON SIZES
+.small
+  font-size: .7em
+
+.large
+  font-size: 1.5em
+
+.huge
+  font-size: 2em
+
+
+//QUOTES
+.contain
+  width: 400px
+  display: inline-block
+  background-image: url("../images/noise_3.png")
+
+//@import url(http://fonts.googleapis.com/css?family=Julee|PT+Serif+Caption|Cagliostro|PT+Serif:400,700|Gentium+Basic|Averia+Serif+Libre:400,700|EB+Garamond|Vollkorn|Alike|Forum|Kaushan+Script)
+
+blockquote
+  position: relative
+  background: white
+  padding: 1em 2em
+  +box-shadow( 1px 3px 8px rgba(0, 0, 0, .2))
+  font-family: "Merriweather"
+  color: #666
+
+  &:before
+    position: absolute
+    top: 0
+    left: -.2em
+    vertical-align: text-bottom
+    content: "“"
+    color: rgba(150, 150, 150, .5)
+    font-size: 4em
+
+  &:after
+    color: rgba(150, 150, 150, .5)
+    content: "„"
+    position: absolute
+    vertical-align: text-top
+    font-size: 4em
+    right: -.2em
+    bottom: 0
+
+.q1
+  &:before
+    font-family: "PT Serif"
+    top: -.1em
+    font-size: 6em
+  &:after
+    font-family: "PT Serif"
+    font-size: 5em
+
+.q2
+  &:before
+    font-family: "Julee"
+    top: -.1em
+    font-size: 5em
+  &:after
+    font-family: "Julee"
+
+.q3
+  &:before
+    font-family: "Cagliostro"
+    top: -.2em
+    font-size: 5em
+  &:after
+    font-family: "Cagliostro"
+
+.q4
+  &:before
+    font-family: "Gentium Basic"
+    font-size: 5em
+  &:after
+    font-family: "Gentium Basic"
+
+.q5
+  &:before
+    font-family: "Averia Serif Libre"
+    top: -.1em
+    font-size: 5em
+  &:after
+    font-family: "Averia Serif Libre"
+
+.q6
+  &:before
+    font-family: "EB Garamond"
+    font-size: 5em
+  &:after
+    font-family: "EB Garamond"
+
+.q7
+  &:before
+    font-family: "Vollkorn"
+    font-size: 5em
+  &:after
+    font-family: "Vollkorn"
+
+.q8
+  &:before
+    font-family: "Alike"
+    font-size: 5em
+  &:after
+    font-family: "Alike"
+
+.q9
+  &:before
+    font-family: "Forum"
+    font-size: 6em
+  &:after
+    font-family: "Forum"
+    font-size: 5em
+
+.q10
+  &:before
+    font-family: "Kaushan Script"
+    left: -.4em
+    font-size: 5em
+  &:after
+    font-family: "Kaushan Script"
+
+.q11
+  &:before
+    font-family: "Averia Serif Libre"
+    font-weight: 700
+    top: -.1em
+    font-size: 5em
+  &:after
+    font-family: "Averia Serif Libre"
+    font-weight: 700
+
+.q12
+  &:before
+    font-family: "PT Serif Caption"
+    top: -.1em
+    font-size: 5.5em
+  &:after
+    font-family: "PT Serif Caption"
+    font-size: 4.5em
+
+//REG FORMS
+#regforms1
+  .fakesidebar
+    position: absolute
+    right: 0
+    top: 0
+    bottom: 0
+    padding: 1em
+    width: 400px
+    background: gray
+  .paper
+    background: white
+    padding: 1em
+    height: 100%
+    box-sizing: border-box
+  .full-app
+    font-family: "Permanent Marker"
+    font-size: 2em
+    text-align: center
+  .twitterstuff
+    text-align: center
+    margin: 1em
+    font-family: "Permanent Marker"
+  .mockup-link
+    font-family: "Permanent Marker"
+  input
+    &[type=text]
+      +plainform
+    &[type=password]
+      +plainform
+  textarea
+    +plainform
+    min-height: 6em
+  button
+    +button2
+  .button
+    +button2
+  fieldset
+    +pie-clearfix
+    border: none
+    padding:
+      top: 0
+      bottom: 0
+      right: 0
+      left: 0
+    margin:
+      top: 1em
+      bottom: 1em
+  legend
+    font-size: 1.1em
+  .deformSet
+    list-style-type: none
+    margin: 0
+    margin-bottom: 1em
+    padding: 0
+  .control-group
+  .form-actions
+    text-align: right
+    &.left
+      text-align: left
+  .aux-link
+    text-align: right
+    margin-bottom: 1em
+    &.left
+      text-align: left
+  .aux-box
+    margin-top: 3em
+  .form-explain
+    color: $base-gray
+    margin-bottom: 1em
+  .aux-button
+    a
+      text-decoration: none
+      color: #000
+      display: inline-block
+      +button2
+    text-align: center
+    margin-bottom: 1em
+  .form-actions
+    a
+      text-decoration: none
+      color: #000
+      display: inline-block
+      +button2
+  .control-label
+    display: none
+
+  .pic-group
+    padding:
+      top: 1em
+      bottom: 1em
+    +pie-clearfix
+    .profile-pic
+      float: left
+    .form-explain
+      margin-left: 160px
+  .profile-pic
+    display: inline-block
+    border-radius: 4px
+    background: black
+    height: 150px
+    width: 150px
+    &.right
+      float: right
+      margin-left: 1em
