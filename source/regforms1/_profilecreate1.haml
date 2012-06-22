@@ -1,0 +1,29 @@
+#profilecreate1.page
+  %fieldset
+    %legend Create profile
+    .pic-group
+      .profile-pic
+      .form-explain
+        Maximum size of 700k. JPG, GIF, PNG.
+        Need help uploading a profile image?
+        %a{:href => "#"} Learn more
+      .form-actions
+        %button{:type => "submit"} Upload
+    .control-group
+      %label.control-label Display name
+      .controls
+        %input{:placeholder => "Display name", :type => "text"}
+    .control-group
+      %label.control-label Location
+      .controls
+        %input{:placeholder => "Location", :type => "text"}
+    .control-group
+      %label.control-label Website
+      .controls
+        %input{:placeholder => "Website", :type => "text"}
+    .control-group
+      %label.control-label Bio
+      .controls
+        %textarea{:placeholder => "Bio"}
+    .form-actions
+      %a{:href => "#fullapp1"} All done!

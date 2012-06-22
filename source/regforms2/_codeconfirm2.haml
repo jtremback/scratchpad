@@ -1,0 +1,19 @@
+#codeconfirm2.page
+  %fieldset
+    %legend Set a password
+    .form-explain
+      You will soon receive an email from us. Once this occurs, copy the code contained within into this form to set a password.
+    .control-group
+      %label.control-label Code
+      .controls
+        %input{:placeholder => "Code", :type => "text"}
+    .control-group
+      %label.control-label Password
+      .controls
+        %input{:placeholder => "Password", :type => "password"}
+    .control-group
+      %label.control-label Confirm password
+      .controls
+        %input{:placeholder => "Confirm your password", :type => "password"}
+    .form-actions
+      %a{:href => "#profilecreate2"} Submit

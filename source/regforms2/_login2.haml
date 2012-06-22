@@ -1,0 +1,24 @@
+#login2.page
+  %fieldset
+    %legend Login
+    .aux-box.left
+      %a{:href => "#twitterscreen2"}
+        %img{:src => "images/sign-in-with-twitter-l.png"}
+    .aux-box.right
+      .well.form-explain
+        If you have reserved a username with us,<br/>
+        %a{:href => "#claim2"} click here to claim it.
+    .control-group
+      %label.control-label Username
+      .controls
+        %input{:placeholder => "Username", :type => "text"}
+    .control-group
+      %label.control-label Password
+      .controls
+        %input{:placeholder => "Password", :type => "password"}
+    .aux-link
+      %a{:href => "#passwordrecover2"} Forgot your password?
+    .form-actions
+      %a{:href => "#fullapp2"} Submit
+  .aux-link.left
+    %a{:href => "#register2"} Register with Hypothes.is

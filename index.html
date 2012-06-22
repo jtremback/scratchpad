@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <!-- Always force latest IE rendering engine (even in intranet) &amp; Chrome Frame -->
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <link href='stylesheets/site.css' rel='stylesheet' type='text/css' />
+    <title>Hypothesis Scratchpad</title>
+  </head>
+  <body class='index'>
+    <div id='main' role='main'>
+      <div class='scratchpad-warning'>
+        <div class='larger'>Scratchpad</div>
+        <div class='smaller'>(not the actual app!)</div>
+      </div>
+      <!-- /= partial "buttons.haml" -->
+      <!-- /= partial "quote.haml" -->
+      <!-- /= partial "quote2.haml" -->
+      <!-- /= partial "pointy_buttons.haml" -->
+      <!-- /= partial "buttons2.haml" -->
+      <div id='regforms1'>
+        <div class='fakesidebar'>
+          <div class='paper'>
+            <div class='page' id='login1'>
+              <fieldset>
+                <legend>Login</legend>
+                <div class='control-group'>
+                  <label class='control-label'>Username</label>
+                  <div class='controls'>
+                    <input placeholder='Username' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Password</label>
+                  <div class='controls'>
+                    <input placeholder='Password' type='password' />
+                  </div>
+                </div>
+                <div class='aux-link'>
+                  <a href='#passwordrecover1'>Forgot your password?</a>
+                </div>
+                <div class='form-actions'>
+                  <a href='#fullapp1'>Submit</a>
+                </div>
+              </fieldset>
+              <div class='aux-link left'>
+                <a href='#twitterscreen1'>
+                  <img src='images/sign-in-with-twitter-d.png' />
+                </a>
+              </div>
+              <div class='aux-link left'>
+                <a href='#register1'>Register / Claim your Username</a>
+              </div>
+            </div>
+            <div class='page' id='register1'>
+              <fieldset>
+                <legend>Register with Hypothes.is</legend>
+                <div class='form-explain'>Enter a username and password to create an account. If you have already reserved a username with us, enter it and a password to claim it.</div>
+                <div class='control-group'>
+                  <label class='control-label'>Username</label>
+                  <div class='controls'>
+                    <input placeholder='Username' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Email</label>
+                  <div class='controls'>
+                    <input placeholder='Enter your email' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Password</label>
+                  <div class='controls'>
+                    <input placeholder='Password' type='password' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Confirm password</label>
+                  <div class='controls'>
+                    <input placeholder='Confirm your password' type='password' />
+                  </div>
+                </div>
+                <div class='form-actions'>
+                  <a href='#emailreceive1'>Register / Claim</a>
+                </div>
+                <a class='mockup-link' href='#usernametaken1'>(if the username is already taken)</a>
+              </fieldset>
+            </div>
+            <!-- /  %fieldset -->
+            <!-- /    %legend Claim your username -->
+            <!-- /    .control-group -->
+            <!-- /      %label.control-label Username -->
+            <!-- /      .controls -->
+            <!-- /        %input{:placeholder => "Username", :type => "text"} -->
+            <!-- /    .control-group -->
+            <!-- /      %label.control-label Email -->
+            <!-- /      .controls -->
+            <!-- /        %input{:placeholder => "Enter your email", :type => "text"} -->
+            <!-- /    .form-actions -->
+            <!-- /      %a{:href => "#profilecreate1"} Claim -->
+            <div class='page' id='profilecreate1'>
+              <fieldset>
+                <legend>Create profile</legend>
+                <div class='pic-group'>
+                  <div class='profile-pic'></div>
+                  <div class='form-explain'>
+                    Maximum size of 700k. JPG, GIF, PNG.
+                    Need help uploading a profile image?
+                    <a href='#'>Learn more</a>
+                  </div>
+                  <div class='form-actions'>
+                    <button type='submit'>Upload</button>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Display name</label>
+                  <div class='controls'>
+                    <input placeholder='Display name' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Location</label>
+                  <div class='controls'>
+                    <input placeholder='Location' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Website</label>
+                  <div class='controls'>
+                    <input placeholder='Website' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Bio</label>
+                  <div class='controls'>
+                    <textarea placeholder='Bio'></textarea>
+                  </div>
+                </div>
+                <div class='form-actions'>
+                  <a href='#fullapp1'>All done!</a>
+                </div>
+              </fieldset>
+            </div>
+            <div class='page' id='fullapp1'>
+              <div class='full-app'>
+                (takes user to app)
+              </div>
+            </div>
+            <div class='page' id='emailreceive1'>
+              <div class='form-explain'>
+                You will soon receive an email from us. Once this occurs, follow the instructions contained within to complete your registration or reset your password. Once you have done this, follow the link below to create your profile.
+              </div>
+              <a href='#profilecreate1'>Create profile</a>
+            </div>
+            <div class='page' id='passwordrecover1'>
+              <fieldset>
+                <legend>Password recovery</legend>
+                <div class='form-explain'>You forgot your password? No worries, just enter your email to receive instructions on how to reset it.</div>
+                <div class='control-group'>
+                  <label class='control-label'>Email</label>
+                  <div class='controls'>
+                    <input placeholder='Email' type='text' />
+                  </div>
+                </div>
+                <div class='form-actions'>
+                  <a href='#emailreceive1'>Submit</a>
+                </div>
+              </fieldset>
+            </div>
+            <div class='page' id='twitterscreen1'>
+              <div class='twitterstuff'>
+                (twitter stuff)
+                <a href='#register1'>Sign in with Twitter</a>
+              </div>
+            </div>
+            <div class='page' id='usernametaken1'>
+              <fieldset>
+                <legend>Pick a different username</legend>
+                <div class='form-explain'>Looks like that username is already taken. Please try another one.</div>
+                <ul class='deformSet'>
+                  <li class='deformSet-item'>
+                    <input name='username' type='radio' value='un1'>Username23</input>
+                  </li>
+                  <li class='deformSet-item'>
+                    <input name='username' type='radio' value='un2'>NameUser</input>
+                  </li>
+                  <li class='deformSet-item'>
+                    <input name='username' type='radio' value='un3'>UN622</input>
+                  </li>
+                  <li class='deformSet-item'>
+                    <input name='username' type='radio' value='un4'>UserN</input>
+                  </li>
+                </ul>
+                <div class='control-group'>
+                  <label class='control-label'>Custom username</label>
+                  <div class='controls'>
+                    <input placeholder='Custom Username' type='text' />
+                  </div>
+                </div>
+                <div class='form-actions'>
+                  <a href='#profilecreate1'>Submit</a>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src='javascripts/jquery172.min.js' type='text/javascript'></script>
+    <script src='javascripts/plugins.js' type='text/javascript'></script>
+    <script src='javascripts/scripts.js' type='text/javascript'></script>
+  </body>
+</html>

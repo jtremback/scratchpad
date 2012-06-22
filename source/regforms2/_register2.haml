@@ -1,0 +1,37 @@
+#register2.page
+  %fieldset
+    %legend Register with Hypothes.is
+    .form-explain Enter a username and password to create an account.
+    .control-group
+      %label.control-label Username
+      .controls
+        %input{:placeholder => "Username", :type => "text"}
+    .control-group
+      %label.control-label Email
+      .controls
+        %input{:placeholder => "Enter your email", :type => "text"}
+    .control-group
+      %label.control-label Password
+      .controls
+        %input{:placeholder => "Password", :type => "password"}
+    .control-group
+      %label.control-label Confirm password
+      .controls
+        %input{:placeholder => "Confirm your password", :type => "password"}
+    .form-actions
+      %a{:href => "#r-codeconfirm2"} Register
+    .mockup-link
+      %a{:href => "#usernametaken2"} (if the username is already taken)
+//  %fieldset
+//    %legend Claim your username
+//    .form-explain If you have already reserved a username with us, enter it and your email to claim it.
+//    .control-group
+//      %label.control-label Username
+//      .controls
+//        %input{:placeholder => "Username", :type => "text"}
+//    .control-group
+//      %label.control-label Email
+//      .controls
+//        %input{:placeholder => "Enter your email", :type => "text"}
+//    .form-actions
+//      %a{:href => "#c-codeconfirm2"} Claim
