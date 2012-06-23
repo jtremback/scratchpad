@@ -26,7 +26,7 @@
               <img src='images/sign-in-with-twitter.png' />
             </a>
             <div class='mockup-link'>
-              <a href='#t-register2'>(not yet registered with hypothesis)</a>
+              <a href='#twitternamechoose2'>(not yet registered with hypothesis)</a>
               <a href='#usernametaken2'>(username taken)</a>
             </div>
           </div>
@@ -34,23 +34,15 @@
         <div class='fakesidebar'>
           <div class='paper'>
             <div class='page' id='login2'>
+              <div class='form-actions'>
+                <a href='#register2'>Sign Up</a>
+              </div>
               <fieldset>
-                <legend>Login</legend>
-                <div class='aux-box left'>
-                  <a href='#twitterscreen2'>
-                    <img src='images/sign-in-with-twitter-l.png' />
-                  </a>
-                </div>
-                <div class='aux-box right'>
-                  <div class='well form-explain'>
-                    If you have reserved a username with us,<br/>
-                    <a href='#claim2'>click here to claim it.</a>
-                  </div>
-                </div>
+                <legend>Log In</legend>
                 <div class='control-group'>
-                  <label class='control-label'>Username</label>
+                  <label class='control-label'>Username or Email</label>
                   <div class='controls'>
-                    <input placeholder='Username' type='text' />
+                    <input placeholder='Username or Email' type='text' />
                   </div>
                 </div>
                 <div class='control-group'>
@@ -59,31 +51,44 @@
                     <input placeholder='Password' type='password' />
                   </div>
                 </div>
-                <div class='aux-link'>
-                  <a href='#passwordrecover2'>Forgot your password?</a>
+                <div class='aux-box left'>
+                  <div class='form-actions left'>
+                    <a href='#c-codeconfirm2'>Log In</a>
+                  </div>
                 </div>
-                <div class='form-actions'>
-                  <a href='#fullapp2'>Submit</a>
+                <div class='aux-box right'>
+                  <div class='aux-link'>
+                    <a href='#passwordrecover2'>Password help?</a>
+                  </div>
                 </div>
               </fieldset>
-              <div class='aux-link left'>
-                <a href='#register2'>Register with Hypothes.is</a>
+              <div class='aux-box left topspace'>
+                <a href='#twitterscreen2'>
+                  <img src='images/sign-in-with-twitter-l.png' />
+                </a>
+              </div>
+              <div class='aux-box right topspace'>
+                <div class='form-explain'>
+                  <a href='#claim2'>Have you already reserved a username with us?</a>
+                </div>
               </div>
             </div>
             <div class='page' id='register2'>
+              <div class='form-actions'>
+                <a href='#login2'>Log In</a>
+              </div>
               <fieldset>
-                <legend>Register with Hypothes.is</legend>
-                <div class='form-explain'>Enter a username and password to create an account.</div>
+                <legend>Sign Up</legend>
+                <div class='control-group'>
+                  <label class='control-label'>Email</label>
+                  <div class='controls'>
+                    <input placeholder='Email' type='text' />
+                  </div>
+                </div>
                 <div class='control-group'>
                   <label class='control-label'>Username</label>
                   <div class='controls'>
                     <input placeholder='Username' type='text' />
-                  </div>
-                </div>
-                <div class='control-group'>
-                  <label class='control-label'>Email</label>
-                  <div class='controls'>
-                    <input placeholder='Enter your email' type='text' />
                   </div>
                 </div>
                 <div class='control-group'>
@@ -92,33 +97,23 @@
                     <input placeholder='Password' type='password' />
                   </div>
                 </div>
-                <div class='control-group'>
-                  <label class='control-label'>Confirm password</label>
-                  <div class='controls'>
-                    <input placeholder='Confirm your password' type='password' />
+                <div class='aux-box left'>
+                  <div class='form-actions left'>
+                    <a href='#c-codeconfirm2'>Sign Up</a>
                   </div>
                 </div>
-                <div class='form-actions'>
-                  <a href='#r-codeconfirm2'>Register</a>
-                </div>
-                <div class='mockup-link'>
-                  <a href='#usernametaken2'>(if the username is already taken)</a>
-                </div>
               </fieldset>
+              <div class='aux-box left topspace'>
+                <a href='#twitterscreen2'>
+                  <img src='images/sign-in-with-twitter-l.png' />
+                </a>
+              </div>
+              <div class='aux-box right topspace'>
+                <div class='form-explain'>
+                  <a href='#claim2'>Have you already reserved a username with us?</a>
+                </div>
+              </div>
             </div>
-            <!-- /  %fieldset -->
-            <!-- /    %legend Claim your username -->
-            <!-- /    .form-explain If you have already reserved a username with us, enter it and your email to claim it. -->
-            <!-- /    .control-group -->
-            <!-- /      %label.control-label Username -->
-            <!-- /      .controls -->
-            <!-- /        %input{:placeholder => "Username", :type => "text"} -->
-            <!-- /    .control-group -->
-            <!-- /      %label.control-label Email -->
-            <!-- /      .controls -->
-            <!-- /        %input{:placeholder => "Enter your email", :type => "text"} -->
-            <!-- /    .form-actions -->
-            <!-- /      %a{:href => "#c-codeconfirm2"} Claim -->
             <div class='page' id='t-register2'>
               <fieldset>
                 <legend>Register with Hypothes.is</legend>
@@ -142,21 +137,21 @@
             </div>
             <div class='page' id='profilecreate2'>
               <fieldset>
-                <legend>Create profile (All fields are optional)</legend>
+                <legend>Create profile</legend>
+                <div class='form-explain'>
+                  Hi, <strong>UserName</strong>, welcome to Hypothes.is! Please fill in your profile. All fields are optional.
+                </div>
                 <div class='pic-group'>
                   <div class='profile-pic'></div>
                   <div class='form-explain'>
-                    Upload a profile picture. Images over 700k will be compressed.
-                    <a href='#'>Learn more</a>
-                  </div>
-                  <div class='form-actions'>
-                    <button type='submit'>Upload</button>
+                    This is your profile<br/>picture from Gravatar.<br/>
+                    <a href='#'>Opt out.</a>
                   </div>
                 </div>
                 <div class='control-group'>
-                  <label class='control-label'>Display name</label>
+                  <label class='control-label'>Name</label>
                   <div class='controls'>
-                    <input placeholder='Display name' type='text' />
+                    <input placeholder='Name' type='text' />
                   </div>
                 </div>
                 <div class='control-group'>
@@ -177,10 +172,118 @@
                     <textarea placeholder='Bio'></textarea>
                   </div>
                 </div>
-                <div class='form-actions'>
-                  <a href='#fullapp2'>All done!</a>
+                <div class='control-group'>
+                  <label class='control-label'>Email</label>
+                  <div class='controls'>
+                    <input placeholder='username@email.com' type='text' />
+                  </div>
+                </div>
+                <div class='form-explain'>
+                  Your email will not be visible to other users.
+                </div>
+                <div class='form-actions left'>
+                  <a href='#fullapp2'>All done</a>
                 </div>
               </fieldset>
+              <fieldset>
+                <legend>Change password</legend>
+                <div class='form-explain'>
+                  If you would like to change your password, please do so below.
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Old password</label>
+                  <div class='controls'>
+                    <input placeholder='Old password' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>New password</label>
+                  <div class='controls'>
+                    <input placeholder='New password' type='text' />
+                  </div>
+                </div>
+                <div class='form-actions left'>
+                  <a href='#fullapp2'>Change password</a>
+                </div>
+              </fieldset>
+              <div class='mockup-link'>
+                <a href='#np-profilecreate2'>(user does not have gravatar)</a>
+              </div>
+            </div>
+            <div class='page' id='np-profilecreate2'>
+              <fieldset>
+                <legend>Create profile</legend>
+                <div class='form-explain'>
+                  Hi, <strong>UserName</strong>, welcome to Hypothes.is! Please fill in your profile. All fields are optional.
+                </div>
+                <div class='pic-group'>
+                  <div class='profile-pic'></div>
+                  <div class='form-explain'>
+                    If you would like a profile <br/>picture, you can add one<br/> using
+                    <a href='#'>Gravatar.</a>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Name</label>
+                  <div class='controls'>
+                    <input placeholder='Name' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Location</label>
+                  <div class='controls'>
+                    <input placeholder='Location' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Website</label>
+                  <div class='controls'>
+                    <input placeholder='Website' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Bio</label>
+                  <div class='controls'>
+                    <textarea placeholder='Bio'></textarea>
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Email</label>
+                  <div class='controls'>
+                    <input placeholder='username@email.com' type='text' />
+                  </div>
+                </div>
+                <div class='form-explain'>
+                  Your email will not be visible to other users.
+                </div>
+                <div class='form-actions left'>
+                  <a href='#fullapp2'>All done</a>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Change password</legend>
+                <div class='form-explain'>
+                  If you would like to change your password, please do so below.
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Old password</label>
+                  <div class='controls'>
+                    <input placeholder='Old password' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>New password</label>
+                  <div class='controls'>
+                    <input placeholder='New password' type='text' />
+                  </div>
+                </div>
+                <div class='form-actions left'>
+                  <a href='#fullapp2'>Change password</a>
+                </div>
+              </fieldset>
+              <div class='mockup-link'>
+                <a href='#profilecreate2'>(user has gravatar)</a>
+              </div>
             </div>
             <div class='page' id='fullapp2'>
               <div class='full-app'>
@@ -196,27 +299,14 @@
             <div class='page' id='passwordrecover2'>
               <fieldset>
                 <legend>Password recovery</legend>
-                <div class='form-explain'>You forgot your password? No worries, just enter your email and set a new password.</div>
                 <div class='control-group'>
                   <label class='control-label'>Email</label>
                   <div class='controls'>
                     <input placeholder='Email' type='text' />
                   </div>
                 </div>
-                <div class='control-group'>
-                  <label class='control-label'>New password</label>
-                  <div class='controls'>
-                    <input placeholder='Password' type='password' />
-                  </div>
-                </div>
-                <div class='control-group'>
-                  <label class='control-label'>Confirm password</label>
-                  <div class='controls'>
-                    <input placeholder='Confirm your password' type='password' />
-                  </div>
-                </div>
-                <div class='form-actions'>
-                  <a href='#p-codeconfirm2'>Submit</a>
+                <div class='form-actions left'>
+                  <a href='#p-codeconfirm2'>Let me change my password</a>
                 </div>
               </fieldset>
             </div>
@@ -224,38 +314,40 @@
               <fieldset>
                 <legend>Pick a different username</legend>
                 <div class='form-explain'>Looks like <strong>UserName</strong> is already taken. Please try another username.</div>
-                <ul class='deformSet'>
-                  <li class='deformSet-item'>
-                    <input name='username' type='radio' value='un1'>UserName23</input>
-                  </li>
-                  <li class='deformSet-item'>
-                    <input name='username' type='radio' value='un2'>NameUser</input>
-                  </li>
-                  <li class='deformSet-item'>
-                    <input name='username' type='radio' value='un3'>UN622</input>
-                  </li>
-                  <li class='deformSet-item'>
-                    <input name='username' type='radio' value='un4'>UserN</input>
-                  </li>
-                </ul>
                 <div class='control-group'>
-                  <label class='control-label'>Custom username</label>
+                  <label class='control-label'>Custom username (pre-validate)</label>
                   <div class='controls'>
-                    <input placeholder='Custom Username' type='text' />
+                    <input placeholder='Choose another' type='text' />
                   </div>
                 </div>
-                <div class='form-actions'>
-                  <a href='#profilecreate2'>Submit</a>
+                <div class='aux-box left'>
+                  <div class='form-actions left'>
+                    <a href='#profilecreate2'>Confirm username</a>
+                  </div>
+                </div>
+                <div class='aux-box right'>
+                  <div class='aux-link'>
+                    <a href='#claim2'>Did you already reserve this username with us?</a>
+                  </div>
                 </div>
               </fieldset>
             </div>
             <div class='page' id='c-codeconfirm2'>
-              <div class='form-explain'>
-                You will soon receive an email from us. Follow the link inside to claim your username.
-              </div>
-              <div class='aux-link left'>
-                <a href='#fullapp2'>Back to hypothesis</a>
-              </div>
+              <fieldset>
+                <legend>Confirm Code</legend>
+                <div class='form-explain'>
+                  You will receive an email with a code, please enter it below to log in.
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Code</label>
+                  <div class='controls'>
+                    <input placeholder='Code' type='text' />
+                  </div>
+                </div>
+                <div class='form-actions left'>
+                  <a href='#profilecreate2'>Log in</a>
+                </div>
+              </fieldset>
             </div>
             <div class='page' id='p-codeconfirm2'>
               <div class='form-explain'>
@@ -274,32 +366,62 @@
               </div>
             </div>
             <div class='page' id='claim2'>
+              <div class='clearfix'>
+                <div class='form-actions'>
+                  <a href='#login2'>Log In</a>
+                </div>
+              </div>
               <fieldset>
-                <legend>Claim your username</legend>
-                <div class='form-explain'>If you have already reserved a username with us, claim it here.</div>
+                <legend>Claim Username</legend>
+                <div class='form-explain'>
+                  If you’ve already reserved a username, use this form to claim it.
+                </div>
                 <div class='control-group'>
                   <label class='control-label'>Email</label>
                   <div class='controls'>
-                    <input placeholder='Enter your email' type='text' />
+                    <input placeholder='Email' type='text' />
+                  </div>
+                </div>
+                <div class='control-group'>
+                  <label class='control-label'>Username</label>
+                  <div class='controls'>
+                    <input placeholder='Username' type='text' />
                   </div>
                 </div>
                 <div class='control-group'>
                   <label class='control-label'>Password</label>
                   <div class='controls'>
-                    <input placeholder='Set a password' type='password' />
+                    <input placeholder='Password' type='password' />
                   </div>
                 </div>
-                <div class='control-group'>
-                  <label class='control-label'>Confirm password</label>
-                  <div class='controls'>
-                    <input placeholder='Confirm your password' type='password' />
+                <div class='aux-box left'>
+                  <div class='form-actions left'>
+                    <a href='#c-codeconfirm2'>Claim it</a>
                   </div>
-                </div>
-                <div class='form-actions'>
-                  <a href='#c-codeconfirm2'>Claim</a>
                 </div>
               </fieldset>
             </div>
+            <div class='page' id='twitternamechoose2'>
+              <fieldset>
+                <legend>Pick a username</legend>
+                <div class='form-explain'>You'll need a username within Hypothes.is. Your Twitter handle <strong>UserName</strong> is available, but you can choose another.</div>
+                <div class='control-group'>
+                  <label class='control-label'>Custom username (pre-validate)</label>
+                  <div class='controls'>
+                    <input placeholder='Choose another' type='text' />
+                  </div>
+                </div>
+                <div class='aux-box left'>
+                  <div class='form-actions left'>
+                    <a href='#profilecreate2'>Confirm username</a>
+                  </div>
+                </div>
+              </fieldset>
+              <div class='mockup-link'>
+                <a href='#usernametaken2'>(username taken)</a>
+              </div>
+            </div>
+            <!-- /If username is changed and does not validate, show link to claim page. -->
           </div>
         </div>
       </div>

@@ -4,7 +4,6 @@ $(document).ready(function() {
   $(window).hashchange( function(){
     var hash = location.hash || '#login2';
 
-
 //    // Set the page title based on the hash.
 //    document.title = ( hash.replace( /^#/, '' ) || 'blank' ) + ' | Hypothes.is';
 
