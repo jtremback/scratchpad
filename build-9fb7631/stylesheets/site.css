@@ -1,0 +1,160 @@
+html {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif; }
+
+a {
+  color: #bd5862;
+  -moz-transition: color 0.2s ease-in 0.2s;
+  -webkit-transition: color 0.2s ease-in 0.2s;
+  -o-transition: color 0.2s ease-in 0.2s;
+  transition: color 0.2s ease-in 0.2s;
+  text-decoration: underline; }
+  a:link, a:visited {
+    text-decoration: underline; }
+  a:active {
+    text-decoration: none; }
+  a:hover {
+    color: #bd1c2b; }
+
+.clearfix {
+  *zoom: 1; }
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.scratchpad-warning {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  -moz-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  font-family: "Permanent Marker"; }
+  .scratchpad-warning .larger {
+    font-size: 2em; }
+  .scratchpad-warning .smaller {
+    font-size: 0.8em; }
+
+.adder {
+  position: relative;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f9f9f9));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #f9f9f9 100%);
+  -moz-border-radius: 0.15em;
+  -webkit-border-radius: 0.15em;
+  -o-border-radius: 0.15em;
+  -ms-border-radius: 0.15em;
+  -khtml-border-radius: 0.15em;
+  border-radius: 0.15em;
+  -moz-box-shadow: inset 0 0.2em 0 rgba(255, 255, 255, 0.2), 0 0.05em 0.1em rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: inset 0 0.2em 0 rgba(255, 255, 255, 0.2), 0 0.05em 0.1em rgba(0, 0, 0, 0.08);
+  -o-box-shadow: inset 0 0.2em 0 rgba(255, 255, 255, 0.2), 0 0.05em 0.1em rgba(0, 0, 0, 0.08);
+  box-shadow: inset 0 0.2em 0 rgba(255, 255, 255, 0.2), 0 0.05em 0.1em rgba(0, 0, 0, 0.08);
+  -moz-transition-property: box-shadow;
+  -webkit-transition-property: box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -moz-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transition-property: -moz-box-shadow;
+  -webkit-transition-property: -moz-box-shadow;
+  -o-transition-property: -moz-box-shadow;
+  transition-property: -moz-box-shadow;
+  -moz-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -moz-transition-property: -webkit-box-shadow;
+  -webkit-transition-property: -webkit-box-shadow;
+  -o-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  -moz-transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -moz-transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  color: #777777;
+  background-color: #ffffff !important;
+  border: 1px solid #d3d3d3;
+  border-radius: .2em;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  padding: .33em .5em;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 7px;
+  border: 4px solid black !important; }
+  .adder:focus {
+    outline: 0;
+    border: 1px solid #969696;
+    -moz-box-shadow: inset 1px 1px 6px -1px #d3d3d3;
+    -webkit-box-shadow: inset 1px 1px 6px -1px #d3d3d3;
+    -o-box-shadow: inset 1px 1px 6px -1px #d3d3d3;
+    box-shadow: inset 1px 1px 6px -1px #d3d3d3; }
+  .adder:hover {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fefefe), color-stop(50%, #f4f4f4), color-stop(51%, #e2e2e2), color-stop(100%, #fdfdfd));
+    background-image: -webkit-linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%);
+    background-image: -moz-linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%);
+    background-image: -o-linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%);
+    background-image: -ms-linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%);
+    background-image: linear-gradient(top, #fefefe 0%, #f4f4f4 50%, #e2e2e2 51%, #fdfdfd 100%);
+    border-color: #969696 #969696 #777777; }
+  .adder:active {
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fcfcfc), color-stop(50%, #f3f3f3), color-stop(51%, #e1e1e1), color-stop(100%, #fbfbfb));
+    background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%);
+    background-image: -moz-linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%);
+    background-image: -o-linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%);
+    background-image: -ms-linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%);
+    background-image: linear-gradient(top, #fcfcfc 0%, #f3f3f3 50%, #e1e1e1 51%, #fbfbfb 100%);
+    -moz-box-shadow: inset 0 0.15em 0.25em rgba(0, 0, 0, 0.15), 0 0.05em 0.1em rgba(0, 0, 0, 0);
+    -webkit-box-shadow: inset 0 0.15em 0.25em rgba(0, 0, 0, 0.15), 0 0.05em 0.1em rgba(0, 0, 0, 0);
+    -o-box-shadow: inset 0 0.15em 0.25em rgba(0, 0, 0, 0.15), 0 0.05em 0.1em rgba(0, 0, 0, 0);
+    box-shadow: inset 0 0.15em 0.25em rgba(0, 0, 0, 0.15), 0 0.05em 0.1em rgba(0, 0, 0, 0);
+    border-color: #969696 #969696 #777777;
+    top: .1em; }
+  .adder > .before {
+    height: 0px;
+    width: 0px;
+    border-top: 8px solid black;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    bottom: -12px;
+    left: 0%;
+    right: 0%;
+    margin-left: auto;
+    margin-right: auto; }
+  .adder button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    background: url("../images/pen_1.png");
+    background-size: 90% 90%;
+    background-position: center;
+    background-repeat: no-repeat; }
